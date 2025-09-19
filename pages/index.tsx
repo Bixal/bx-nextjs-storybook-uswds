@@ -1,52 +1,15 @@
 import Image from "next/image";
-import styles from "../styles/page.module.css";
+import { Alert } from '@trussworks/react-uswds'
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <p> GIVE ME A STAR ON <a href="https://github.com/vercel/next.js" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </p>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>pages/index.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
+    <div className="grid-container">
+      <main>
+        <h1>Next.js + Storybook + USWDS Trussworks library</h1>
+        <h2>Welcome to this prototype</h2>
+        <Alert type="info" headingLevel="h3" heading="This is an info alert">
+          This is an example of an info alert using the USWDS Alert component.
+        </Alert>
       </main>
     </div>
   );
