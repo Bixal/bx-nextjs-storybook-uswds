@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  sassOptions: {
+    includePaths: [
+      "./node_modules/@uswds/uswds/packages",
+    ],
+  },
 };
 
 export default nextConfig;

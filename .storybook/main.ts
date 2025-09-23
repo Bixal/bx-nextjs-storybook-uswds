@@ -16,7 +16,10 @@ const config: StorybookConfig = {
     "options": {}
   },
   "staticDirs": [
-    "../public"
+    "../public",
+    "../node_modules/@uswds",
+    "../node_modules/@uswds/uswds/packages"
   ]
 };
+
 export default config;

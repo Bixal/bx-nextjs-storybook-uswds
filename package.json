@@ -1,5 +1,6 @@
 {
-  "name": "rayestrada",
+  "type": "module",
+  "name": "app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,7 +9,8 @@
     "start": "next start",
     "lint": "eslint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "postinstall": "node ./scripts/postinstall.js"
   },
   "dependencies": {
     "@trussworks/react-uswds": "^10.0.2",
