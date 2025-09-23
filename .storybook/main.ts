@@ -1,5 +1,7 @@
 import type { StorybookConfig } from "@storybook/nextjs-vite";
 
+import path from "path";
+
 const config: StorybookConfig = {
   "stories": [
     "../components/**/*.mdx",
@@ -19,7 +21,24 @@ const config: StorybookConfig = {
     "../public",
     "../node_modules/@uswds",
     "../node_modules/@uswds/uswds/packages"
-  ]
+  ],
+  async viteFinal(config) {
+    const { mergeConfig } = await import('vite');
+
+    return mergeConfig(config, {
+      css: {
+        preprocessorOptions: {
+          scss: {
+            quietDeps: true,
+            loadPaths: [
+              // SASS resolves load paths relative to project root.
+              "node_modules/@uswds/uswds/packages"
+            ]
+          }
+        }
+      }
+    })
+  }
 };
 
 export default config;
