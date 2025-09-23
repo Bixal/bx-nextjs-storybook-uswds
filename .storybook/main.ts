@@ -1,7 +1,5 @@
 import type { StorybookConfig } from "@storybook/nextjs-vite";
 
-import path from "path";
-
 const config: StorybookConfig = {
   "stories": [
     "../components/**/*.mdx",
