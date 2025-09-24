@@ -10,9 +10,6 @@ export interface ArticleProps {
 
 export const Article: React.FC<ArticleProps> = ({ title, author, date, children }) => (
   <article className="storybook-article">
-    <Alert type="info" heading="Notice" headingLevel="h3">
-      This is an example of a USWDS informational alert above the article header.
-    </Alert>
     <header>
       <h1>{title}</h1>
       {(author || date) && (
@@ -23,6 +20,9 @@ export const Article: React.FC<ArticleProps> = ({ title, author, date, children 
         </p>
       )}
     </header>
+    <Alert type="info" heading="" headingLevel="h3" className="margin-y-2">
+      This is an example of an embedded USWDS Trussworks component.
+    </Alert>
     <section>
       {children}
     </section>
