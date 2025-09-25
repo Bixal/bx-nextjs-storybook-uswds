@@ -7,6 +7,7 @@ const meta: Meta<typeof Article> = {
   tags: ['autodocs'],
   argTypes: {
     title: { control: 'text' },
+    link: { control: 'text' },
     author: { control: 'text' },
     date: { control: 'text' },
     children: { control: 'text' },
@@ -19,6 +20,7 @@ type Story = StoryObj<typeof Article>;
 export const Default: Story = {
   args: {
     title: 'Example Article Component',
+    link: 'https://github.com/Bixal/bx-nextjs-storybook-uswds',
     author: 'First Last',
     date: '09/22/2025',
     children: 'This is the content of the article. You can use **Markdown** or plain text here.',
@@ -28,6 +30,7 @@ export const Default: Story = {
 export const NoMeta: Story = {
   args: {
     title: 'Example Article Without Meta',
+    link: 'https://github.com/Bixal/bx-nextjs-storybook-uswds',
     children: 'This article does not have author or date information.',
   },
 };
