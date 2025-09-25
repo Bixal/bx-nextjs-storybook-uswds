@@ -18,16 +18,16 @@ type Story = StoryObj<typeof Article>;
 
 export const Default: Story = {
   args: {
-    title: 'Storybook Article Component',
-    author: 'Jane Doe',
-    date: '2025-09-22',
+    title: 'Example Article Component',
+    author: 'First Last',
+    date: '09/22/2025',
     children: 'This is the content of the article. You can use **Markdown** or plain text here.',
   },
 };
 
 export const NoMeta: Story = {
   args: {
-    title: 'Article Without Meta',
+    title: 'Example Article Without Meta',
     children: 'This article does not have author or date information.',
   },
 };
