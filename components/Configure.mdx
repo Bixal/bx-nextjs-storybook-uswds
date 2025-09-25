@@ -1,292 +1,112 @@
 import { Meta } from "@storybook/addon-docs/blocks";
-import Image from "next/image";
 
-import Github from "./assets/github.svg";
-import Discord from "./assets/discord.svg";
-import Youtube from "./assets/youtube.svg";
-import Tutorials from "./assets/tutorials.svg";
-import Styling from "./assets/styling.png";
-import Context from "./assets/context.png";
-import Assets from "./assets/assets.png";
-import Docs from "./assets/docs.png";
-import Share from "./assets/share.png";
-import FigmaPlugin from "./assets/figma-plugin.png";
-import Testing from "./assets/testing.png";
-import Accessibility from "./assets/accessibility.png";
-import Theming from "./assets/theming.png";
-import AddonLibrary from "./assets/addon-library.png";
-
-export const RightArrow = () => <svg 
-    viewBox="0 0 14 14" 
-    width="8px" 
-    height="14px" 
-    style={{ 
-      marginLeft: '4px',
-      display: 'inline-block',
-      shapeRendering: 'inherit',
-      verticalAlign: 'middle',
-      fill: 'currentColor',
-      'path fill': 'currentColor'
+export const RightArrow = () => (
+  <svg
+    viewBox="0 0 14 14"
+    width="8px"
+    height="14px"
+    style={{
+      marginLeft: "4px",
+      display: "inline-block",
+      shapeRendering: "inherit",
+      verticalAlign: "middle",
+      fill: "currentColor",
+      "path fill": "currentColor",
     }}
->
-  <path d="m11.1 7.35-5.5 5.5a.5.5 0 0 1-.7-.7L10.04 7 4.9 1.85a.5.5 0 1 1 .7-.7l5.5 5.5c.2.2.2.5 0 .7Z" />
-</svg>
+  >
+    <path d="m11.1 7.35-5.5 5.5a.5.5 0 0 1-.7-.7L10.04 7 4.9 1.85a.5.5 0 1 1 .7-.7l5.5 5.5c.2.2.2.5 0 .7Z" />
+  </svg>
+);
 
 <Meta title="Configure your project" />
 
 <div className="sb-container">
   <div className='sb-section-title'>
-    # Configure your project
+    # Next.js + USWDS Starter Project
 
-    Because Storybook works separately from your app, you'll need to configure it for your specific stack and setup. Below, explore guides for configuring Storybook with popular frameworks and tools. If you get stuck, learn how you can ask for help from our community.
+    This project demonstrates how to build accessible, government-compliant web applications using **Next.js**, **Storybook**, and the **U.S. Web Design System (USWDS)**. It provides a complete development environment for creating components that follow federal accessibility standards and design guidelines.
+
+    <strong>Key Features:</strong> Automated USWDS asset management, integrated accessibility testing, and component-driven development workflow.
 
     <strong>NOTE: Delete the example Components after you have established your own.</strong>
+
   </div>
   <div className="sb-section">
     <div className="sb-section-item">
-      <Image
-        src={Styling}
-        alt="A wall of logos representing different styling technologies"
-        width={0}
-        height={0}
-        style={{ width: '100%', height: 'auto' }}
-      />
-      <h4 className="sb-section-item-heading">Add styling and CSS</h4>
-      <p className="sb-section-item-paragraph">Like with web applications, there are many ways to include CSS within Storybook. Learn more about setting up styling within Storybook.</p>
+      <svg style={{maxWidth: '80px', width: '100%', height: '80px' }} xmlns="http://www.w3.org/2000/svg" width="299" height="283" viewBox="0 0 299 283">
+  <g fill="none" fill-rule="evenodd">
+    <polygon fill="#81AEFC" points="298.45 169.342 193.773 169.335 246.104 8.944"/>
+    <polygon fill="#4D52AF" points="233.844 0 201.49 99.116 64.451 0"/>
+    <polygon fill="#EE601D" points="4.458 183.269 89.148 122.016 141.5 282.401"/>
+    <polygon fill="#F6BD9C" points="52.346 8.624 137.027 69.889 0 169.023"/>
+    <polygon fill="#E6E6E6" points="156.817 282.475 124.476 183.354 293.859 183.343"/>
+  </g>
+</svg>
+      <h4 className="sb-section-item-heading">USWDS Integration</h4>
+      <p className="sb-section-item-paragraph">USWDS assets are automatically copied to `public/uswds/` during installation. Customize design tokens in `styles/uswds-theme.scss` to override USWDS defaults while maintaining accessibility compliance.</p>
       <a
-        href="https://storybook.js.org/docs/configure/styling-and-css/?renderer=react&ref=configure"
+        href="https://designsystem.digital.gov/documentation/settings/"
         target="_blank"
-      >Learn more<RightArrow /></a>
+      >USWDS Settings<RightArrow /></a>
     </div>
     <div className="sb-section-item">
-      <Image 
-        width={0}
-        height={0}
-        style={{ width: '100%', height: 'auto' }}
-        src={Context}
-        alt="An abstraction representing the composition of data for a component"
-      />
-      <h4 className="sb-section-item-heading">Provide context and mocking</h4>
-      <p className="sb-section-item-paragraph">Often when a story doesn't render, it's because your component is expecting a specific environment or context (like a theme provider) to be available.</p>
+      <svg style={{maxWidth: '80px', width: '100%', height: '80px' }} viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img"><g fill="none" fill-rule="evenodd"><path d="M24 12.969C24 11.0599 25.3491 9.4169 27.2218 9.04547L41.2218 6.26861C43.6952 5.77801 46 7.67058 46 10.1922V32.5818C46 34.4909 44.6509 36.1339 42.7782 36.5053L28.7782 39.2822C26.3048 39.7728 24 37.8802 24 35.3586L24 12.969Z" fill="#FF4785" fill-opacity="0.5"></path><path d="M2 10.1914C2 7.66981 4.30482 5.77725 6.77823 6.26784L20.7782 9.0447C22.6509 9.41613 24 11.0592 24 12.9683V35.3579C24 37.8795 21.6952 39.772 19.2218 39.2814L5.22177 36.5046C3.34914 36.1331 2 34.4901 2 32.581V10.1914Z" fill="#FF4785" fill-opacity="0.7"></path><path d="M22 10C22 10 23.75 10.3438 24.5537 11.1875C25.3574 12.0312 26 14.5625 26 14.5625C26 14.5625 26 36.6719 26 39.2188C26 41.7656 27.2725 45.3438 27.2725 45.3438L24.5537 41.875L22.9824 45.3438C22.9824 45.3438 22 42.125 22 39.4375C22 36.75 22 10 22 10Z" fill="#FF4785"></path></g></svg>
+      <h4 className="sb-section-item-heading">Component Development</h4>
+      <p className="sb-section-item-paragraph">Create components in `components/[Name]/` with `.tsx`, `.stories.ts`, and optional `.test.ts` files. Use `@trussworks/react-uswds` components for consistent federal design patterns.</p>
       <a
-        href="https://storybook.js.org/docs/writing-stories/decorators/?renderer=react&ref=configure#context-for-mocking"
+        href="https://github.com/trussworks/react-uswds"
         target="_blank"
-      >Learn more<RightArrow /></a>
+      >Trussworks Components<RightArrow /></a>
     </div>
     <div className="sb-section-item">
-      <Image 
-        width={0}
-        height={0}
-        style={{ width: '100%', height: 'auto' }} 
-        src={Assets} 
-        alt="A representation of typography and image assets" 
-      />
+      <svg style={{maxWidth: '80px', width: '100%', height: '80px' }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 394 79"><path d="M261.919 0.0330722H330.547V12.7H303.323V79.339H289.71V12.7H261.919V0.0330722Z"></path><path d="M149.052 0.0330722V12.7H94.0421V33.0772H138.281V45.7441H94.0421V66.6721H149.052V79.339H80.43V12.7H80.4243V0.0330722H149.052Z"></path><path d="M183.32 0.0661486H165.506L229.312 79.3721H247.178L215.271 39.7464L247.127 0.126654L229.312 0.154184L206.352 28.6697L183.32 0.0661486Z"></path><path d="M201.6 56.7148L192.679 45.6229L165.455 79.4326H183.32L201.6 56.7148Z"></path><path clip-rule="evenodd" d="M80.907 79.339L17.0151 0H0V79.3059H13.6121V16.9516L63.8067 79.339H80.907Z" fill-rule="evenodd"></path><path d="M333.607 78.8546C332.61 78.8546 331.762 78.5093 331.052 77.8186C330.342 77.1279 329.991 76.2917 330 75.3011C329.991 74.3377 330.342 73.5106 331.052 72.8199C331.762 72.1292 332.61 71.7838 333.607 71.7838C334.566 71.7838 335.405 72.1292 336.115 72.8199C336.835 73.5106 337.194 74.3377 337.204 75.3011C337.194 75.9554 337.028 76.5552 336.696 77.0914C336.355 77.6368 335.922 78.064 335.377 78.373C334.842 78.6911 334.252 78.8546 333.607 78.8546Z"></path><path d="M356.84 45.4453H362.872V68.6846C362.863 70.8204 362.401 72.6472 361.498 74.1832C360.585 75.7191 359.321 76.8914 357.698 77.7185C356.084 78.5364 354.193 78.9546 352.044 78.9546C350.079 78.9546 348.318 78.6001 346.75 77.9094C345.182 77.2187 343.937 76.1826 343.024 74.8193C342.101 73.456 341.649 71.7565 341.649 69.7207H347.691C347.7 70.6114 347.903 71.3838 348.29 72.0291C348.677 72.6744 349.212 73.1651 349.895 73.5105C350.586 73.8559 351.38 74.0286 352.274 74.0286C353.243 74.0286 354.073 73.8286 354.746 73.4196C355.419 73.0197 355.936 72.4199 356.296 71.6201C356.646 70.8295 356.831 69.8479 356.84 68.6846V45.4453Z"></path><path d="M387.691 54.5338C387.544 53.1251 386.898 52.0254 385.773 51.2438C384.638 50.4531 383.172 50.0623 381.373 50.0623C380.11 50.0623 379.022 50.2532 378.118 50.6258C377.214 51.0075 376.513 51.5164 376.033 52.1617C375.554 52.807 375.314 53.5432 375.295 54.3703C375.295 55.061 375.461 55.6608 375.784 56.1607C376.107 56.6696 376.54 57.0968 377.103 57.4422C377.656 57.7966 378.274 58.0874 378.948 58.3237C379.63 58.56 380.313 58.76 380.995 58.9236L384.14 59.6961C385.404 59.9869 386.631 60.3778 387.802 60.8776C388.973 61.3684 390.034 61.9955 390.965 62.7498C391.897 63.5042 392.635 64.413 393.179 65.4764C393.723 66.5397 394 67.7848 394 69.2208C394 71.1566 393.502 72.8562 392.496 74.3285C391.491 75.7917 390.043 76.9369 388.143 77.764C386.252 78.582 383.965 79 381.272 79C378.671 79 376.402 78.6002 374.493 77.8004C372.575 77.0097 371.08 75.8463 370.001 74.3194C368.922 72.7926 368.341 70.9294 368.258 68.7391H374.235C374.318 69.8842 374.687 70.8386 375.314 71.6111C375.95 72.3745 376.78 72.938 377.795 73.3197C378.819 73.6923 379.962 73.8832 381.226 73.8832C382.545 73.8832 383.707 73.6832 384.712 73.2924C385.708 72.9016 386.492 72.3564 387.055 71.6475C387.627 70.9476 387.913 70.1206 387.922 69.1754C387.913 68.312 387.654 67.5939 387.156 67.0304C386.649 66.467 385.948 65.9944 385.053 65.6127C384.15 65.231 383.098 64.8856 381.899 64.5857L378.081 63.6223C375.323 62.9225 373.137 61.8592 371.541 60.4323C369.937 59.0054 369.143 57.115 369.143 54.7429C369.143 52.798 369.678 51.0894 370.758 49.6261C371.827 48.1629 373.294 47.0268 375.148 46.2179C377.011 45.4 379.114 45 381.456 45C383.836 45 385.92 45.4 387.719 46.2179C389.517 47.0268 390.929 48.1538 391.952 49.5897C392.976 51.0257 393.511 52.6707 393.539 54.5338H387.691Z"></path></svg>
       <div>
-        <h4 className="sb-section-item-heading">Load assets and resources</h4>
-        <p className="sb-section-item-paragraph">To link static files (like fonts) to your projects and stories, use the
-        `staticDirs` configuration option to specify folders to load when
-        starting Storybook.</p>
+        <h4 className="sb-section-item-heading">Development Workflow</h4>
+        <p className="sb-section-item-paragraph">Run `npm run dev --turbopack` for Next.js development and `npm run storybook` for component development. Both environments share the same USWDS assets and styling configuration.</p>
         <a
-          href="https://storybook.js.org/docs/configure/images-and-assets/?renderer=react&ref=configure"
+          href="https://github.com/Bixal/bx-nextjs-storybook-uswds"
           target="_blank"
-        >Learn more<RightArrow /></a>
+        >Ready to use<RightArrow /></a>
       </div>
     </div>
   </div>
 </div>
 <div className="sb-container">
   <div className='sb-section-title'>
-    # Do more with Storybook
+    ## Project Features & Capabilities
 
-    Now that you know the basics, let's explore other parts of Storybook that will improve your experience. This list is just to get you started. You can customise Storybook in many ways to fit your needs.
+    This starter includes pre-configured tools and workflows specifically designed for building accessible government web applications. All features work seamlessly with USWDS components and Next.js.
+
   </div>
 
   <div className="sb-section">
     <div className="sb-features-grid">
       <div className="sb-grid-item">
-        <Image 
-          width={0}
-          height={0}
-          style={{ width: '100%', height: 'auto' }} 
-          src={Docs} 
-          alt="A screenshot showing the autodocs tag being set, pointing a docs page being generated" 
-        />
-        <h4 className="sb-section-item-heading">Autodocs</h4>
-        <p className="sb-section-item-paragraph">Auto-generate living,
-          interactive reference documentation from your components and stories.</p>
-        <a
-          href="https://storybook.js.org/docs/writing-docs/autodocs/?renderer=react&ref=configure"
-          target="_blank"
-        >Learn more<RightArrow /></a>
+        <h4 className="sb-section-item-heading">Auto Documentation</h4>
+        <p className="sb-section-item-paragraph">All components include automatic documentation generation with USWDS design token references and accessibility guidelines built-in.</p>
       </div>
       <div className="sb-grid-item">
-        <Image 
-          width={0}
-          height={0}
-          style={{ width: '100%', height: 'auto' }} 
-          src={Share} 
-          alt="A browser window showing a Storybook being published to a chromatic.com URL" 
-        />
-        <h4 className="sb-section-item-heading">Publish to Chromatic</h4>
-        <p className="sb-section-item-paragraph">Publish your Storybook to review and collaborate with your entire team.</p>
-        <a
-          href="https://storybook.js.org/docs/sharing/publish-storybook/?renderer=react&ref=configure#publish-storybook-with-chromatic"
-          target="_blank"
-        >Learn more<RightArrow /></a>
+        <h4 className="sb-section-item-heading">Federal Component Library</h4>
+        <p className="sb-section-item-paragraph">Share your USWDS-compliant component library across government projects with consistent accessibility and design standards.</p>
       </div>
       <div className="sb-grid-item">
-        <Image 
-          width={0}
-          height={0}
-          style={{ width: '100%', height: 'auto' }} 
-          src={FigmaPlugin} 
-          alt="Windows showing the Storybook plugin in Figma" 
-        />
-        <h4 className="sb-section-item-heading">Figma Plugin</h4>
-        <p className="sb-section-item-paragraph">Embed your stories into Figma to cross-reference the design and live
-          implementation in one place.</p>
-        <a
-          href="https://storybook.js.org/docs/sharing/design-integrations/?renderer=react&ref=configure#embed-storybook-in-figma-with-the-plugin"
-          target="_blank"
-        >Learn more<RightArrow /></a>
+        <h4 className="sb-section-item-heading">Design System Bridge</h4>
+        <p className="sb-section-item-paragraph">Connect your Figma designs with live USWDS components, ensuring design-development consistency for government projects.</p>
       </div>
       <div className="sb-grid-item">
-        <Image 
-          width={0}
-          height={0}
-          style={{ width: '100%', height: 'auto' }} 
-          src={Testing} 
-          alt="Screenshot of tests passing and failing" 
-        />
-        <h4 className="sb-section-item-heading">Testing</h4>
-        <p className="sb-section-item-paragraph">Use stories to test a component in all its variations, no matter how
-          complex.</p>
-        <a
-          href="https://storybook.js.org/docs/writing-tests/?renderer=react&ref=configure"
-          target="_blank"
-        >Learn more<RightArrow /></a>
+        <h4 className="sb-section-item-heading">Integrated Testing</h4>
+        <p className="sb-section-item-paragraph">Vitest with Playwright browser testing ensures your components work across government-required browsers and devices.</p>
       </div>
       <div className="sb-grid-item">
-        <Image 
-          width={0}
-          height={0}
-          style={{ width: '100%', height: 'auto' }} 
-          src={Accessibility} 
-          alt="Screenshot of accessibility tests passing and failing" 
-        />
-        <h4 className="sb-section-item-heading">Accessibility</h4>
-        <p className="sb-section-item-paragraph">Automatically test your components for a11y issues as you develop.</p>
-        <a
-          href="https://storybook.js.org/docs/writing-tests/accessibility-testing/?renderer=react&ref=configure"
-          target="_blank"
-        >Learn more<RightArrow /></a>
+        <h4 className="sb-section-item-heading">Accessibility First</h4>
+        <p className="sb-section-item-paragraph">Built-in a11y testing with USWDS compliance checks. Meet Section 508 requirements automatically during development.</p>
       </div>
       <div className="sb-grid-item">
-        <Image 
-          width={0}
-          height={0}
-          style={{ width: '100%', height: 'auto' }} 
-          src={Theming} 
-          alt="Screenshot of Storybook in light and dark mode" 
-        />
-        <h4 className="sb-section-item-heading">Theming</h4>
-        <p className="sb-section-item-paragraph">Theme Storybook's UI to personalize it to your project.</p>
-        <a
-          href="https://storybook.js.org/docs/configure/theming/?renderer=react&ref=configure"
-          target="_blank"
-        >Learn more<RightArrow /></a>
+        <h4 className="sb-section-item-heading">USWDS Theming</h4>
+        <p className="sb-section-item-paragraph">Customize USWDS design tokens while maintaining federal compliance. Modify colors, typography, and spacing through configuration files.</p>
       </div>
     </div>
   </div>
-</div>
-<div className='sb-addon'>
-  <div className='sb-addon-text'>
-    <h4>Addons</h4>
-    <p className="sb-section-item-paragraph">Integrate your tools with Storybook to connect workflows.</p>
-    <a
-        href="https://storybook.js.org/addons/?ref=configure"
-        target="_blank"
-      >Discover all addons<RightArrow /></a>
-  </div>
-  <div className='sb-addon-img'>
-    <Image 
-      width={650}
-      height={347}
-      src={AddonLibrary} 
-      alt="Integrate your tools with Storybook to connect workflows." 
-    />
-  </div>
-</div>
-
-<div className="sb-section sb-socials">
-    <div className="sb-section-item">
-      <Image 
-        width={32}
-        height={32}
-        layout="fixed"
-        src={Github} 
-        alt="Github logo" 
-        className="sb-explore-image"
-      />
-      Join our contributors building the future of UI development.
-
-      <a
-        href="https://github.com/storybookjs/storybook"
-        target="_blank"
-      >Star on GitHub<RightArrow /></a>
-    </div>
-    <div className="sb-section-item">
-      <Image 
-        width={33}
-        height={32}
-        layout="fixed"
-        src={Discord} 
-        alt="Discord logo" 
-        className="sb-explore-image"
-      />
-      <div>
-        Get support and chat with frontend developers.
-
-        <a
-          href="https://discord.gg/storybook"
-          target="_blank"
-        >Join Discord server<RightArrow /></a>
-      </div>
-    </div>
-    <div className="sb-section-item">
-      <Image 
-        width={32}
-        height={32}
-        layout="fixed"
-        src={Youtube} 
-        alt="Youtube logo" 
-        className="sb-explore-image"
-      />
-      <div>
-        Watch tutorials, feature previews and interviews.
-
-        <a
-          href="https://www.youtube.com/@chromaticui"
-          target="_blank"
-        >Watch on YouTube<RightArrow /></a>
-      </div>
-    </div>
-    <div className="sb-section-item">
-      <Image 
-        width={33}
-        height={32}
-        layout="fixed"
-        src={Tutorials} 
-        alt="A book" 
-        className="sb-explore-image"
-      />
-      <p>Follow guided walkthroughs on for key workflows.</p>
-
-      <a
-          href="https://storybook.js.org/tutorials/?ref=configure"
-          target="_blank"
-        >Discover tutorials<RightArrow /></a>
-    </div>
 </div>
 
 <style>
@@ -300,10 +120,6 @@ export const RightArrow = () => <svg
     display: flex;
     flex-direction: row;
     gap: 20px;
-  }
-
-  img {
-    object-fit: cover;
   }
 
   .sb-section-title {
@@ -325,80 +141,16 @@ export const RightArrow = () => <svg
     padding-bottom: 5px !important;
     margin: 0 !important;
   }
+  
   .sb-section-item-paragraph {
     margin: 0;
     padding-bottom: 10px;
   }
 
-  .sb-chevron {
-    margin-left: 5px;
-  }
-
   .sb-features-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 32px 20px;
-  }
-
-  .sb-socials {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .sb-socials p {
-    margin-bottom: 10px;
-  }
-
-  .sb-explore-image {
-    max-height: 32px;
-    align-self: flex-start;
-  }
-
-  .sb-addon {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    position: relative;
-    background-color: #EEF3F8;
-    border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    background: #EEF3F8;
-    height: 180px;
-    margin-bottom: 48px;
-    overflow: hidden;
-  }
-
-  .sb-addon-text {
-    padding-left: 48px;
-    max-width: 240px;
-  }
-
-  .sb-addon-text h4 {
-    padding-top: 0px;
-  }
-
-  .sb-addon-img {
-    position: absolute;
-    left: 345px;
-    top: 0;
-    height: 100%;
-    width: 200%;
-    overflow: hidden;
-  }
-
-  .sb-addon-img img {
-    width: 650px;
-    transform: rotate(-15deg);
-    margin-left: 40px;
-    margin-top: -72px;
-    box-shadow: 0 0 1px rgba(255, 255, 255, 0);
-    backface-visibility: hidden;
-  }
-
-  @media screen and (max-width: 800px) {
-    .sb-addon-img {
-      left: 300px;
-    }
   }
 
   @media screen and (max-width: 600px) {
@@ -408,40 +160,6 @@ export const RightArrow = () => <svg
 
     .sb-features-grid {
       grid-template-columns: repeat(1, 1fr);
-    }
-
-    .sb-socials {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .sb-addon {
-      height: 280px;
-      align-items: flex-start;
-      padding-top: 32px;
-      overflow: hidden;
-    }
-
-    .sb-addon-text {
-      padding-left: 24px;
-    }
-
-    .sb-addon-img {
-      right: 0;
-      left: 0;
-      top: 130px;
-      bottom: 0;
-      overflow: hidden;
-      height: auto;
-      width: 124%;
-    }
-
-    .sb-addon-img img {
-      width: 1200px;
-      transform: rotate(-12deg);
-      margin-left: 0;
-      margin-top: 48px;
-      margin-bottom: -40px;
-      margin-left: -24px;
     }
   }
   `}
