@@ -19,7 +19,7 @@ type Story = StoryObj<typeof Article>;
 
 export const Default: Story = {
   args: {
-    title: '',
+    title: 'Example Article Component',
     link: 'https://github.com/Bixal/bx-nextjs-storybook-uswds',
     author: 'First Last',
     date: '09/22/2025',
