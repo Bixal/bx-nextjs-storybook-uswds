@@ -16,5 +16,7 @@ jobs:
           node-version-file: ".nvmrc"
           cache: "npm"
       - run: npm ci --timing
+      - name: Install Playwright browsers
+        run: npx playwright install
       - name: "Test Storybook"
         run: npm run test:storybook
