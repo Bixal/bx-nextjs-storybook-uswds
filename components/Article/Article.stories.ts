@@ -23,7 +23,7 @@ export const Default: Story = {
     link: 'https://github.com/Bixal/bx-nextjs-storybook-uswds',
     author: 'First Last',
     date: '09/22/2025',
-    children: 'This is the content of the article. You can use **Markdown** or plain text here.',
+    children: 'This is the content of the article. Use plain text here.',
   },
 };
 

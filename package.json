@@ -4,12 +4,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
     "start": "next start",
+    "dev": "next dev --turbopack",
+    "dev:storybook": "storybook dev -p 6006",
+    "storybook": "npm run dev:storybook",
+    "build": "next build --turbopack",
+    "build:storybook": "storybook build",
     "lint": "eslint",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "test:storybook": "vitest --project=storybook",
     "postinstall": "node ./scripts/postinstall.js"
   },
   "dependencies": {

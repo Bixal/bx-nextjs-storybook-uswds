@@ -1,0 +1,28 @@
+# Includes a11y testing.
+name: Test Storybook
+
+on:
+  pull_request:
+    paths:
+      - "components/**"
+  workflow_dispatch:
+    inputs:
+      target_branch:
+        description: "Optional: branch or tag to run the workflow against. If blank, select from the Actions UI."
+        required: false
+        default: ""
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+      - run: npm ci --timing
+      - name: Install Playwright browsers
+        run: npx playwright install
+      - name: "Test Storybook"
+        run: npm run test:storybook

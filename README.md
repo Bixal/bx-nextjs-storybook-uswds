@@ -80,12 +80,18 @@ Edit [`styles/uswds-theme.scss`](styles/uswds-theme.scss) to override USWDS defa
 ## Development Scripts
 
 ```bash
-npm run dev               # Start Next.js development server
-npm run build             # Build for production
+# Development
+npm run dev               # Start Next.js development server (Turbopack)
+npm run dev:storybook     # Start Storybook in dev mode (alias: npm run storybook)
+
+# Build & Start
+npm run build             # Build Next.js for production
+npm run build:storybook   # Build Storybook static site
 npm start                 # Start production server
+
+# Quality & housekeeping
 npm run lint              # Run ESLint
-npm run storybook         # Start Storybook development server
-npm run build-storybook   # Build Storybook for production
+npm run postinstall       # Run postinstall script (copies USWDS assets)
 ```
 
 ## Learn More
