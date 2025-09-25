@@ -11,6 +11,7 @@
     "build": "next build --turbopack",
     "build:storybook": "storybook build",
     "lint": "eslint",
+    "test:storybook": "vitest --project=storybook",
     "postinstall": "node ./scripts/postinstall.js"
   },
   "dependencies": {
