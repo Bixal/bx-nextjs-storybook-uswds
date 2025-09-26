@@ -1,0 +1,42 @@
+name: Lint and format code
+
+on: push
+# Cancel old runs if a new change is pushed.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+      - run: npm ci --timing
+      - name: Run formatting check
+        run: npm run format
+  lint:
+    needs: format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+      - run: npm ci --timing
+      - name: Run formatting check
+        run: npm run lint
+  types:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+      - run: npm ci --timing
+      - name: Run type check
+        run: npm run type-check
