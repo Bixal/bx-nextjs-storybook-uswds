@@ -9,7 +9,7 @@ This is a **Next.js application** with integrated **Storybook** for component de
 **USWDS Asset Management**: USWDS static assets (fonts, images, CSS) are automatically copied from `node_modules/@uswds/uswds/dist` to `public/uswds/` via the `postinstall` script. This ensures both Next.js and Storybook can access assets at the same paths.
 
 **SASS Configuration**: The project uses a 3-phase SCSS compilation pattern:
-1. Load settings from `styles/uswds-theme.scss` 
+1. Load settings from `styles/uswds-theme.scss`
 2. Import USWDS core via `@forward "uswds"`
 3. Add custom styles (currently unused phase)
 
@@ -17,16 +17,18 @@ This is a **Next.js application** with integrated **Storybook** for component de
 
 ## Development Workflows
 
-**Component Development**: 
+**Component Development**:
 - Create components in `components/[ComponentName]/` with `.tsx`, `.stories.ts`, and optional `.test.ts`
 - Stories use `@storybook/nextjs-vite` framework with autodocs enabled
 - Access USWDS components via `import { ComponentName } from '@trussworks/react-uswds'`
 
-**Asset Paths**: 
+Note on dependencies: this project prefers keeping extra dependencies to a minimum. Before adding a new runtime or dev dependency, consider whether the functionality can be implemented with existing libraries or native platform features. When a new dependency is necessary, include a short justification in your PR description (purpose, maintenance/size tradeoffs, and security considerations).
+
+**Asset Paths**:
 - USWDS assets available at `/uswds/fonts`, `/uswds/img`, `/uswds/css`
 - Configure paths in `styles/uswds-theme.scss` using `$theme-font-path` and `$theme-image-path`
 
-**Testing Strategy**: 
+**Testing Strategy**:
 - Vitest with Storybook integration for component testing
 - Browser testing via Playwright in headless Chromium
 - Accessibility testing built into Storybook via `@storybook/addon-a11y`
@@ -43,7 +45,7 @@ This is a **Next.js application** with integrated **Storybook** for component de
 
 ```bash
 npm run dev --turbopack      # Next.js dev with Turbopack
-npm run storybook            # Storybook dev server on :6006  
+npm run storybook            # Storybook dev server on :6006
 npm run build --turbopack    # Production build with Turbopack
 npm install                  # Triggers USWDS asset copy via postinstall
 ```

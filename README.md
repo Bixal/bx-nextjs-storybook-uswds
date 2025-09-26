@@ -12,6 +12,14 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 - NodeJS (see [`.nvmrc`](.nvmrc) for required version)
 - npm or pnpm
 
+> [!NOTE]
+> Note on dependencies: we want to keep dependencies lean. Before adding a new dependency, check if you can do the job with built‑in features or existing libraries.
+>
+> If you need a new dependency, add a short note in your PR explaining:
+> - **Why:** What it does and why we need it.
+> - **Maintenance/size:** Ongoing upkeep and bundle size tradeoffs.
+> - **Security:** Possible risks and how we’ll mitigate them.
+
 
 ### Installation
 
