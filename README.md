@@ -2,7 +2,6 @@
 
 A complete starter template for building accessible web applications using Next.js, Storybook, and the U.S. Web Design System (USWDS).
 
-
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -16,15 +15,14 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 > Note on dependencies: we want to keep dependencies lean. Before adding a new dependency, check if you can do the job with built‑in features or existing libraries.
 >
 > If you need a new dependency, add a short note in your PR explaining:
+>
 > - **Why:** What it does and why we need it.
 > - **Maintenance/size:** Ongoing upkeep and bundle size tradeoffs.
 > - **Security:** Possible risks and how we’ll mitigate them.
 
-
 ### Installation
 
 Clone the repo:
-
 
 ```bash
 git clone git@github.com:Bixal/bx-nextjs-storybook-uswds.git
@@ -80,8 +78,7 @@ Edit [`styles/uswds-theme.scss`](styles/uswds-theme.scss) to override USWDS defa
 
 ```scss
 @use "uswds-core" with (
-  $theme-banner-background-color: "ink",
-  // Add your customizations here.
+  $theme-banner-background-color: "ink" // Add your customizations here.
 );
 ```
 

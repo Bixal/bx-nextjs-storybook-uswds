@@ -2,9 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   sassOptions: {
-    includePaths: [
-      "./node_modules/@uswds/uswds/packages",
-    ],
+    includePaths: ["./node_modules/@uswds/uswds/packages"],
   },
 };
 

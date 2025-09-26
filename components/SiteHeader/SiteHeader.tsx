@@ -26,8 +26,12 @@ export default function SiteHeader(): React.ReactElement {
   }
 
   const testMenuItems = [
-    <a href="#linkOne" key="one">Simple link one</a>,
-    <a href="#linkTwo" key="two">Simple link two</a>,
+    <a href="#linkOne" key="one">
+      Simple link one
+    </a>,
+    <a href="#linkTwo" key="two">
+      Simple link two
+    </a>,
   ];
 
   const testItemsMenu = [
@@ -41,7 +45,12 @@ export default function SiteHeader(): React.ReactElement {
         label="Nav Label"
         isCurrent={true}
       />
-      <Menu key="one" items={testMenuItems} isOpen={isOpen[0]} id="testDropDownOne" />
+      <Menu
+        key="one"
+        items={testMenuItems}
+        isOpen={isOpen[0]}
+        id="testDropDownOne"
+      />
     </>,
     <a href="#two" key="two" className="usa-nav__link">
       <span>Parent link</span>
@@ -58,7 +67,8 @@ export default function SiteHeader(): React.ReactElement {
       </a>
 
       <SiteAlert variant="emergency">
-        This is an example of an site-wide alert using the Trussworks USWDS SiteAlert component.
+        This is an example of an site-wide alert using the Trussworks USWDS
+        SiteAlert component.
       </SiteAlert>
 
       <GovBanner />
@@ -67,7 +77,9 @@ export default function SiteHeader(): React.ReactElement {
         <div className="usa-navbar">
           <div className="usa-logo">
             <em className="usa-logo__text">
-              <Link href="/" title="&lt;Project title&gt;">&lt;Project title&gt;</Link>
+              <Link href="/" title="&lt;Project title&gt;">
+                &lt;Project title&gt;
+              </Link>
             </em>
           </div>
           <NavMenuButton onClick={handleMenuToggle} label="Menu" />

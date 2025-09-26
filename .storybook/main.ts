@@ -1,27 +1,27 @@
 import type { StorybookConfig } from "@storybook/nextjs-vite";
 
 const config: StorybookConfig = {
-  "stories": [
+  stories: [
     "../components/**/*.mdx",
-    "../components/**/*.stories.@(js|jsx|mjs|ts|tsx)"
+    "../components/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
-  "addons": [
+  addons: [
     "@chromatic-com/storybook",
     "@storybook/addon-docs",
     "@storybook/addon-a11y",
-    "@storybook/addon-vitest"
+    "@storybook/addon-vitest",
   ],
-  "framework": {
-    "name": "@storybook/nextjs-vite",
-    "options": {}
+  framework: {
+    name: "@storybook/nextjs-vite",
+    options: {},
   },
-  "staticDirs": [
+  staticDirs: [
     "../public",
     "../node_modules/@uswds",
-    "../node_modules/@uswds/uswds/packages"
+    "../node_modules/@uswds/uswds/packages",
   ],
   async viteFinal(config) {
-    const { mergeConfig } = await import('vite');
+    const { mergeConfig } = await import("vite");
 
     return mergeConfig(config, {
       css: {
@@ -30,13 +30,13 @@ const config: StorybookConfig = {
             quietDeps: true,
             loadPaths: [
               // SASS resolves load paths relative to project root.
-              "node_modules/@uswds/uswds/packages"
-            ]
-          }
-        }
-      }
-    })
-  }
+              "node_modules/@uswds/uswds/packages",
+            ],
+          },
+        },
+      },
+    });
+  },
 };
 
 export default config;
