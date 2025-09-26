@@ -96,6 +96,12 @@ npm start                 # Start production server
 
 # Quality & housekeeping
 npm run lint              # Run ESLint
+npm run type-check        # Run TypeScript compiler (no emit)
+
+# Apply automatic fixes locally
+npm run format:fix        # Run Prettier to rewrite files
+npm run lint:fix          # Run ESLint with --fix to apply fixable rules
+
 npm run postinstall       # Run postinstall script (copies USWDS assets)
 ```
 
