@@ -11,8 +11,10 @@
     "build": "next build --turbopack",
     "build:storybook": "storybook build",
     "lint": "eslint",
+    "lint:fix": "eslint --fix",
     "format": "prettier . --check",
     "format:fix": "prettier . --write",
+    "type-check": "tsc --noEmit",
     "test:storybook": "vitest --project=storybook",
     "postinstall": "node ./scripts/postinstall.js"
   },
