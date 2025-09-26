@@ -1,16 +1,11 @@
-import { SiteAlert } from "@trussworks/react-uswds";
+import { GridContainer } from "@trussworks/react-uswds";
 import { Article } from "../components/Article/Article";
 
 export default function Home() {
   return (
-    <>
-      <SiteAlert variant="emergency">
-        This is an example of an site-wide alert using the Trussworks USWDS
-        SiteAlert component.
-      </SiteAlert>
+    <main id="main-content">
       <div className="usa-section">
-        <div className="grid-container">
-          <main className="usa-prose">
+        <GridContainer className="usa-prose">
             <h1>Next.js + Storybook + USWDS Trussworks library</h1>
             <p>
               Welcome to this prototype. This template repository demonstrates
@@ -19,6 +14,22 @@ export default function Home() {
               hope this setup helps other developers build accessible, scalable,
               and well-documented applications more efficiently.
             </p>
+
+            <Article
+              title="Welcome to Our Application"
+              link="https://github.com/Bixal/bx-nextjs-storybook-uswds"
+              author="Development Team"
+              date="09/25/2025"
+            >
+              <p>
+                This is an example of the Article component embedded in the
+                Next.js home page. The Article component demonstrates how to
+                integrate custom components from the storybook instance.
+              </p>
+            </Article>
+            
+            <h2>Resources</h2>
+            <p>Here are some useful links related to this project:</p>
 
             <ul>
               <li>
@@ -45,22 +56,8 @@ export default function Home() {
                 </a>
               </li>
             </ul>
-
-            <Article
-              title="Welcome to Our Application"
-              link="https://github.com/Bixal/bx-nextjs-storybook-uswds"
-              author="Development Team"
-              date="09/25/2025"
-            >
-              <p>
-                This is an example of the Article component embedded in the
-                Next.js home page. The Article component demonstrates how to
-                integrate custom components from the storybook instance.
-              </p>
-            </Article>
-          </main>
-        </div>
+        </GridContainer>
       </div>
-    </>
+    </main>
   );
 }
