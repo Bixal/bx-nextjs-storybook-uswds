@@ -18,10 +18,19 @@ https://designsystem.digital.gov/documentation/settings/
 @use "uswds-core" with (
   $theme-show-compile-warnings: true,
   $theme-show-notifications: false,
+  // Global Max-width and spacing settings
+  $theme-site-alert-max-width: "widescreen",
+  $theme-banner-max-width: "widescreen",
+  $theme-header-max-width: "widescreen",
+  $theme-identifier-max-width: "widescreen",
+  $theme-footer-max-width: "widescreen",
+  $theme-grid-container-max-width: "widescreen",
+  $theme-in-page-nav-main-content-max-width: "widescreen",
+  $theme-site-margins-width: 8,
+
+  // Banner settings
   $theme-banner-background-color: "ink",
   $theme-banner-link-color: "primary-light",
-  $theme-banner-max-width: "widescreen",
-  $theme-checkbox-border-radius: "md",
 
   // Specify USWDS font and image paths.
   // Same paths are successfully used for both Next.js and Storybook.
