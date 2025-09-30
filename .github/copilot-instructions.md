@@ -9,7 +9,6 @@ This is a **Next.js application** with integrated **Storybook** for component de
 **USWDS Asset Management**: USWDS static assets (fonts, images, CSS) are automatically copied from `node_modules/@uswds/uswds/dist` to `public/uswds/` via the `postinstall` script. This ensures both Next.js and Storybook can access assets at the same paths.
 
 **SASS Configuration**: The project uses a 3-phase SCSS compilation pattern:
-
 1. Load settings from `styles/uswds-theme.scss`
 2. Import USWDS core via `@forward "uswds"`
 3. Add custom styles (currently unused phase)
@@ -19,7 +18,6 @@ This is a **Next.js application** with integrated **Storybook** for component de
 ## Development Workflows
 
 **Component Development**:
-
 - Create components in `components/[ComponentName]/` with `.tsx`, `.stories.ts`, and optional `.test.ts`
 - Stories use `@storybook/nextjs-vite` framework with autodocs enabled
 - Access USWDS components via `import { ComponentName } from '@trussworks/react-uswds'`
@@ -27,12 +25,10 @@ This is a **Next.js application** with integrated **Storybook** for component de
 Note on dependencies: this project prefers keeping extra dependencies to a minimum. Before adding a new runtime or dev dependency, consider whether the functionality can be implemented with existing libraries or native platform features. When a new dependency is necessary, include a short justification in your PR description (purpose, maintenance/size tradeoffs, and security considerations).
 
 **Asset Paths**:
-
 - USWDS assets available at `/uswds/fonts`, `/uswds/img`, `/uswds/css`
 - Configure paths in `styles/uswds-theme.scss` using `$theme-font-path` and `$theme-image-path`
 
 **Testing Strategy**:
-
 - Vitest with Storybook integration for component testing
 - Browser testing via Playwright in headless Chromium
 - Accessibility testing built into Storybook via `@storybook/addon-a11y`
@@ -44,6 +40,31 @@ Note on dependencies: this project prefers keeping extra dependencies to a minim
 **Static Directory Setup**: Storybook's `staticDirs` includes both `../public` and USWDS node_modules paths, enabling direct asset access in stories.
 
 **TypeScript Configuration**: Uses `"type": "module"` in package.json with ES module imports throughout, including in config files.
+
+**Note on Next.js App Router (app/)**
+
+- This repo uses the Next.js App Router conventions. Routes and layouts live under the `app/` directory (for example `app/layout.tsx` and `app/page.tsx`) rather than the old `pages/_app.tsx` / `pages/_document.tsx` patterns.
+- Global CSS should be imported once in `app/layout.tsx` (not in `_app.tsx`). Example:
+
+```tsx
+// app/layout.tsx
+import '../styles/styles.scss';
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html>
+      <body>{children}</body>
+    </html>
+  );
+}
+```
+
+- Files under `app/` are Server Components by default. To use hooks or browser APIs mark a file as a client component with the directive `"use client"` at the top. Client components can use `useState`, `useEffect`, and other browser features.
+- Avoid placing browser-only code (window, document, DOM APIs) in server components or in files imported by both server and client code; keep interactive UI in client components or load it dynamically.
+- If you previously used `_document.tsx` for static document markup, move that markup into `app/layout.tsx` or a server component; keep interactive parts in client components or dynamically import them with `next/dynamic`.
+
+These notes help contributors avoid hydration errors and misplaced imports when working with the App Router.
+
 
 ## Critical Commands
 

@@ -1,5 +1,6 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import type { Metadata } from "next";
 import Image from "next/image";
+import "../styles/styles.scss";
 import "@trussworks/react-uswds/lib/index.css";
 import {
   Identifier,
@@ -11,8 +12,18 @@ import {
   Link,
   IdentifierIdentity,
 } from "@trussworks/react-uswds";
+import SiteHeader from "../components/SiteHeader/SiteHeader";
 
-export default function Document() {
+export const metadata: Metadata = {
+  title: "Next.js + Storybook + USWDS",
+  description: "A template combining Next.js, Storybook, and USWDS",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const identifierLinkContent = (
     <>
       <li className="usa-identifier__required-links-item">
@@ -34,14 +45,14 @@ export default function Document() {
   );
 
   return (
-    <Html lang="en">
-      <Head />
+    <html lang="en">
       <body>
         <a className="usa-skipnav" href="#main-content">
           Skip to main content
         </a>
-        <Main />
-
+        <SiteHeader />
+        {children}
+        
         <Identifier>
           <IdentifierMasthead aria-label="Agency identifier">
             <IdentifierLogos>
@@ -58,8 +69,7 @@ export default function Document() {
             </IdentifierLogos>
             <IdentifierIdentity domain="domain.edu.mil.gov">
               <span>
-                An official website of the{" "}
-                <Link href="#">Test Agency Name</Link>
+                An official website of the <Link href="#">Test Agency Name</Link>
               </span>
             </IdentifierIdentity>
           </IdentifierMasthead>
@@ -75,8 +85,7 @@ export default function Document() {
             </span>
           </IdentifierGov>
         </Identifier>
-        <NextScript />
       </body>
-    </Html>
+    </html>
   );
 }

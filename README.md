@@ -53,7 +53,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ├── components/           # Reusable components with stories
 │   ├── Button/
 │   └── Article/
-├── pages/               # Next.js pages
+├── app/                 # Next.js app
 ├── public/uswds/        # USWDS static assets (auto-generated)
 ├── styles/              # SCSS files and USWDS theme
 ├── .storybook/          # Storybook configuration

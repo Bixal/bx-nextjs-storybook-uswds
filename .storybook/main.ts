@@ -20,6 +20,13 @@ const config: StorybookConfig = {
     "../node_modules/@uswds",
     "../node_modules/@uswds/uswds/packages",
   ],
+  refs: {
+    "uswds-react": {
+      title: "USWDS React from Trussworks",
+      url: "https://trussworks.github.io/react-uswds/",
+      expanded: false
+    },
+  },
   async viteFinal(config) {
     const { mergeConfig } = await import("vite");
 
