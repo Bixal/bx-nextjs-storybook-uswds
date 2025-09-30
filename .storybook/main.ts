@@ -24,7 +24,7 @@ const config: StorybookConfig = {
     "uswds-react": {
       title: "USWDS React from Trussworks",
       url: "https://trussworks.github.io/react-uswds/",
-      expanded: false
+      expanded: false,
     },
   },
   async viteFinal(config) {
