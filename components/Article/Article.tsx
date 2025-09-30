@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from '@trussworks/react-uswds';
+import React from "react";
+import { Link } from "@trussworks/react-uswds";
 
 export interface ArticleProps {
   title: string;
@@ -9,7 +9,13 @@ export interface ArticleProps {
   children: React.ReactNode;
 }
 
-export const Article: React.FC<ArticleProps> = ({ title, link, author, date, children }) => (
+export const Article: React.FC<ArticleProps> = ({
+  title,
+  link,
+  author,
+  date,
+  children,
+}) => (
   <article className="storybook-article margin-y-4">
     <header>
       <h2>
@@ -20,13 +26,11 @@ export const Article: React.FC<ArticleProps> = ({ title, link, author, date, chi
       {(author || date) && (
         <p className="storybook-article-meta">
           {author && <span>By {author}</span>}
-          {author && date && ' | '}
+          {author && date && " | "}
           {date && <span>{date}</span>}
         </p>
       )}
     </header>
-    <section>
-      {children}
-    </section>
+    <section>{children}</section>
   </article>
 );

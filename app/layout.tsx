@@ -52,7 +52,7 @@ export default function RootLayout({
         </a>
         <SiteHeader />
         {children}
-        
+
         <Identifier>
           <IdentifierMasthead aria-label="Agency identifier">
             <IdentifierLogos>
@@ -69,7 +69,8 @@ export default function RootLayout({
             </IdentifierLogos>
             <IdentifierIdentity domain="domain.edu.mil.gov">
               <span>
-                An official website of the <Link href="#">Test Agency Name</Link>
+                An official website of the{" "}
+                <Link href="#">Test Agency Name</Link>
               </span>
             </IdentifierIdentity>
           </IdentifierMasthead>
