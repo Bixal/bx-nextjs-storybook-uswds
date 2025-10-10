@@ -5,7 +5,24 @@
 @forward "./uswds-theme.scss";
 
 // 2. Load USWDS source code
-@forward "uswds";
+// @forward "uswds";
+
+@forward "uswds-global";
+@forward "uswds-typography";
+@forward "uswds-form-controls";
+
+// https://designsystem.digital.gov/components/packages/#included-packages
+// Note: We should avoid `uswds-utilities` as its the heaviest package.
+@forward "usa-accordion";
+@forward "usa-banner";
+@forward "usa-header";
+@forward "usa-skipnav";
+@forward "usa-site-alert";
+@forward "usa-alert";
+@forward "usa-footer";
+@forward "usa-identifier";
+@forward "usa-layout-grid";
+@forward "usa-section";
 
 // 3. Load your project's custom Sass
 // @forward "project-custom.scss";

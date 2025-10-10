@@ -1,4 +1,4 @@
-import { Meta } from "@storybook/addon-docs/blocks";
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs/blocks";
 
 export const RightArrow = () => (
   <svg
@@ -109,6 +109,48 @@ export const RightArrow = () => (
   </div>
 </div>
 
+## Colors
+
+Colors can be found in `./styles/uswds-theme.scss`.
+
+<ColorPalette>
+  <ColorItem
+    title="Base"
+    subtitle="Greys"
+    colors={{
+      "Base lightest": "#f5f6f7",
+      "Base lighter": "#dfe1e2",
+      Base: "#71767a",
+      "Base dark": "#565c65",
+      "Base darker": "#3d4551",
+      "Base darkest": "#1c1d1f",
+      Ink: "#1c1d1f",
+    }}
+  />
+  <ColorItem
+    title="Primary"
+    colors={{
+      "Primary lighter": "#b8c8ff",
+      "Primary light": "#628ef4",
+      Primary: "#4866ff",
+      "Primary vivid": "#3e4ded",
+      "Primary dark": "#222fbf",
+      "Primary darker": "#1b2b85",
+    }}
+  />
+  <ColorItem
+    title="Secondary"
+    colors={{
+      "Secondary lighter": "#d0c3e9",
+      "Secondary light": "#9d84d2",
+      Secondary: "#8168b3",
+      "Secondary vivid": "#665190",
+      "Secondary dark": "#4c3d69",
+      "Secondary darker": "#312b3f",
+    }}
+  />
+</ColorPalette>
+
 <style>
   {`
   .sb-container {
@@ -141,7 +183,7 @@ export const RightArrow = () => (
     padding-bottom: 5px !important;
     margin: 0 !important;
   }
-  
+
   .sb-section-item-paragraph {
     margin: 0;
     padding-bottom: 10px;
