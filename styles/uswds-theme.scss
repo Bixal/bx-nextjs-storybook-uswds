@@ -28,9 +28,47 @@ https://designsystem.digital.gov/documentation/settings/
   $theme-in-page-nav-main-content-max-width: "widescreen",
   $theme-site-margins-width: 8,
 
-  // Banner settings
-  $theme-banner-background-color: "ink",
-  $theme-banner-link-color: "primary-light",
+  // Theme colors
+  //
+  // Primary
+  $theme-color-primary-lighter: "blue-warm-20v",
+  $theme-color-primary-light: "blue-warm-40v",
+  $theme-color-primary: "blue-warm-70v",
+  $theme-color-primary-vivid:   "blue-warm-60v",
+  $theme-color-primary-dark: "blue-warm-80v",
+  $theme-color-primary-darker: "blue-warm-90",
+
+  // Base
+  $theme-color-base-lightest: "gray-3",
+  $theme-color-base-darkest:  "gray-cool-90",
+  $theme-color-base-ink:      "gray-cool-90",
+
+  // Secondary
+  $theme-color-secondary-lighter: "indigo-cool-20v",
+  $theme-color-secondary-light:   "indigo-cool-40v",
+  $theme-color-secondary:         "indigo-cool-50v",
+  $theme-color-secondary-vivid:   "indigo-cool-60v",
+  $theme-color-secondary-dark:    "indigo-cool-70v",
+  $theme-color-secondary-darker:  "indigo-cool-80v",
+
+  // Accent
+  $theme-color-accent-cool-lighter: "mint-cool-10v",
+  $theme-color-accent-cool-light:   "mint-cool-20v",
+  $theme-color-accent-cool:         "mint-cool-30v",
+  $theme-color-accent-cool-dark:    "mint-cool-50v",
+  $theme-color-accent-cool-darker:  "mint-cool-60v",
+
+  $theme-color-accent-warm-lighter: "gold-10v",
+  $theme-color-accent-warm-light:   "gold-20v",
+  $theme-color-accent-warm:         "gold-30v",
+  $theme-color-accent-warm-dark:    "gold-40v",
+  $theme-color-accent-warm-darker:  "gold-50v",
+
+  $theme-focus-color: "primary",
+
+  $theme-color-emergency:      "red-cool-60v",
+  $theme-color-emergency-dark: "red-cool-80v",
+
 
   // Specify USWDS font and image paths.
   // Same paths are successfully used for both Next.js and Storybook.
