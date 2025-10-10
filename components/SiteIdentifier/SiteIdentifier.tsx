@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import "./SiteIdentifier.scss";
+
 import {
   Identifier,
   IdentifierMasthead,
