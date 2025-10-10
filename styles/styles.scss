@@ -10,6 +10,7 @@
 @forward "uswds-global";
 @forward "uswds-typography";
 @forward "uswds-form-controls";
+// @forward "uswds-utilities"; // Leaving out because it's the heaviest package.
 
 // https://designsystem.digital.gov/components/packages/#included-packages
 // Note: We should avoid `uswds-utilities` as its the heaviest package.
