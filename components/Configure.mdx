@@ -24,6 +24,11 @@ export const RightArrow = () => (
   <div className='sb-section-title'>
     # Next.js + USWDS Starter Project
 
+    **Table of Contents**
+
+    - [Project features](#project-features--capabilities)
+    - [Colors](#colors)
+
     This project demonstrates how to build accessible, government-compliant web applications using **Next.js**, **Storybook**, and the **U.S. Web Design System (USWDS)**. It provides a complete development environment for creating components that follow federal accessibility standards and design guidelines.
 
     <strong>Key Features:</strong> Automated USWDS asset management, integrated accessibility testing, and component-driven development workflow.
@@ -111,7 +116,7 @@ export const RightArrow = () => (
 
 ## Colors
 
-Colors can be found in `./styles/uswds-theme.scss`.
+Colors can be found in `./styles/uswds-theme.scss`. They're based on [USWDS color tokens](https://designsystem.digital.gov/design-tokens/color).
 
 <ColorPalette>
   <ColorItem
@@ -147,6 +152,26 @@ Colors can be found in `./styles/uswds-theme.scss`.
       "Secondary vivid": "#665190",
       "Secondary dark": "#4c3d69",
       "Secondary darker": "#312b3f",
+    }}
+  />
+  <ColorItem
+    title="Accent Cool"
+    colors={{
+      "Accent cool lighter": "#7efbe1",
+      "Accent cool light": "#29e1cb",
+      "Accent cool": "#1dc2ae",
+      "Accent cool dark": "#008480",
+      "Accent cool darker": "#0f6460",
+    }}
+  />
+  <ColorItem
+    title="Accent Warm"
+    colors={{
+      "Accent warm lighter": "#ffe396",
+      "Accent warm light": "#ffbe2e",
+      "Accent warm": "#e5a000",
+      "Accent warm dark": "#c2850c",
+      "Accent warm darker": "#936f38",
     }}
   />
 </ColorPalette>
