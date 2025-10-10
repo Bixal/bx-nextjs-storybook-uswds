@@ -10,27 +10,50 @@ import {
   IdentifierLinks,
   IdentifierGov,
   IdentifierIdentity,
+  IdentifierLinkItem,
+  IdentifierLink,
   Link,
 } from "@trussworks/react-uswds";
+
+const requiredLinks = [
+  {
+    href: "#",
+    label: "About <Parent shortname>",
+  },
+  {
+    href: "#",
+    label: "Accessibility statement",
+  },
+  {
+    href: "#",
+    label: "FOIA requests",
+  },
+  {
+    href: "#",
+    label: "No FEAR Act data",
+  },
+  {
+    href: "#",
+    label: "Office of the Inspector General",
+  },
+  {
+    href: "#",
+    label: "Performance reports",
+  },
+  {
+    href: "#",
+    label: "Privacy policy",
+  },
+];
 
 export default function SiteIdentifier(): React.ReactElement {
   const identifierLinkContent = (
     <>
-      <li className="usa-identifier__required-links-item">
-        <Link href="#" className="usa-identifier__required-link">
-          Test Link 1
-        </Link>
-      </li>
-      <li className="usa-identifier__required-links-item">
-        <Link href="#" className="usa-identifier__required-link">
-          Test Link 2
-        </Link>
-      </li>
-      <li className="usa-identifier__required-links-item">
-        <Link href="#" className="usa-identifier__required-link">
-          Test Link 3
-        </Link>
-      </li>
+      {requiredLinks.map((link, index) => (
+        <IdentifierLinkItem key={index}>
+          <IdentifierLink href={link.href}>{link.label}</IdentifierLink>
+        </IdentifierLinkItem>
+      ))}
     </>
   );
 
