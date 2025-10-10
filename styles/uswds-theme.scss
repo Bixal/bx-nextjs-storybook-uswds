@@ -36,8 +36,8 @@ https://designsystem.digital.gov/documentation/settings/
 
   // Base
   $theme-color-base-lightest: "gray-cool-3",
-  $theme-color-base-darkest: "gray-cool-90",
-  $theme-color-base-ink: "gray-cool-90",
+  $theme-color-base-darkest: "gray-cool-80",
+  $theme-color-base-ink: "gray-cool-80",
 
   // Secondary
   $theme-color-secondary-lighter: "violet-20",
@@ -75,9 +75,17 @@ https://designsystem.digital.gov/documentation/settings/
   $utilities-use-important: true,
 
   // Use USWDS defaults for typography
+  //
+  // 18px based on typeset tokens
+  // https://designsystem.digital.gov/design-tokens/typesetting/font-size/
+  $theme-body-font-size: 7,
+  // Lineheight tightened to 1.5 since font size was increased.
+  $theme-body-line-height: 4,
   $theme-style-body-element: true,
   $theme-font-type-sans: "public-sans",
   $theme-global-content-styles: true,
   $theme-global-link-styles: true,
+  $theme-heading-margin-top: 3rem,
+  $theme-paragraph-margin-top: 1rem,
   $theme-global-paragraph-styles: true
 );
