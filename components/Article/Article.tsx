@@ -16,7 +16,7 @@ export const Article: React.FC<ArticleProps> = ({
   date,
   children,
 }) => (
-  <article className="storybook-article margin-y-4">
+  <article className="storybook-article">
     <header>
       <h2>
         <Link href={link} className="no-underline">

@@ -105,6 +105,10 @@ npm run lint:fix          # Run ESLint with --fix to apply fixable rules
 npm run postinstall       # Run postinstall script (copies USWDS assets)
 ```
 
+> [!NOTE]
+> If you get an error when running `npm start`, try running the build
+> command [`npm run build`] first and then try again.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
