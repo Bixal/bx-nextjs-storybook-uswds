@@ -27,13 +27,15 @@ export default function SiteHeader(): React.ReactElement {
     });
   }
 
-  const testMenuItems = [
-    <a href="#linkOne" key="one">
-      Simple link one
+  const primaryNavItems = [
+    <a href="#" key="certs">
+      Certification
     </a>,
-    <a href="#linkTwo" key="two">
-      Simple link two
-    </a>,
+  ];
+
+  const secondaryNavItems = [
+    <a href="#login" key="login-link">Login</a>,
+    <a href="#register" key="register-link">Register</a>
   ];
 
   const testItemsMenu = [
@@ -49,7 +51,7 @@ export default function SiteHeader(): React.ReactElement {
       />
       <Menu
         key="one"
-        items={testMenuItems}
+        items={primaryNavItems}
         isOpen={isOpen[0]}
         id="testDropDownOne"
       />
@@ -88,7 +90,7 @@ export default function SiteHeader(): React.ReactElement {
         </div>
         <ExtendedNav
           primaryItems={testItemsMenu}
-          secondaryItems={testMenuItems}
+          secondaryItems={secondaryNavItems}
           mobileExpanded={expanded}
           onToggleMobileNav={handleMenuToggle}
         >
