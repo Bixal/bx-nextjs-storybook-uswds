@@ -19,9 +19,9 @@
     "postinstall": "node ./scripts/postinstall.js"
   },
   "dependencies": {
-    "@trussworks/react-uswds": "10.0.2",
-    "@uswds/uswds": "3.13.0",
-    "next": "15.5.4",
+    "@trussworks/react-uswds": "10.2.0",
+    "@uswds/uswds": "3.8.2",
+    "next": "16.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },
@@ -32,11 +32,11 @@
     "@storybook/addon-docs": "10.1.10",
     "@storybook/addon-vitest": "10.1.10",
     "@storybook/nextjs-vite": "10.1.10",
-    "@types/node": "24",
+    "@types/node": "25",
     "@types/react": "19",
     "@types/react-dom": "19",
-    "@vitest/browser": "3.2.4",
-    "@vitest/coverage-v8": "3.2.4",
+    "@vitest/browser": "4.0.16",
+    "@vitest/coverage-v8": "4.0.16",
     "baseline-browser-mapping": "2.9.11",
     "eslint": "9",
     "eslint-config-next": "16.1.1",
@@ -47,6 +47,6 @@
     "sass-embedded": "1.97.1",
     "storybook": "10.1.10",
     "typescript": "5",
-    "vitest": "3.2.4"
+    "vitest": "4.0.16"
   }
 }
