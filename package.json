@@ -5,10 +5,10 @@
   "private": true,
   "scripts": {
     "start": "next start",
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "dev:storybook": "storybook dev -p 6006",
     "storybook": "npm run dev:storybook",
-    "build": "next build --turbopack",
+    "build": "next build",
     "build:storybook": "storybook build",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
@@ -47,6 +47,7 @@
     "sass-embedded": "1.97.1",
     "storybook": "10.1.10",
     "typescript": "5",
-    "vitest": "4.0.16"
+    "vitest": "4.0.16",
+    "@vitest/browser-playwright": "4.0.16"
   }
 }
