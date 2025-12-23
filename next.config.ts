@@ -2,7 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   sassOptions: {
-    includePaths: ["./node_modules/@uswds/uswds/packages"],
+    loadPaths: ["./node_modules/@uswds/uswds/packages"],
+    implementation: "sass-embedded",
   },
 };
 
