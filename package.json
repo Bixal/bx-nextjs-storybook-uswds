@@ -37,9 +37,10 @@
     "@types/react": "19",
     "@types/react-dom": "19",
     "@vitest/browser": "4.1.7",
+    "@vitest/browser-playwright": "4.1.7",
     "@vitest/coverage-v8": "4.1.7",
     "baseline-browser-mapping": "2.10.31",
-    "eslint": "10",
+    "eslint": "9.39.4",
     "eslint-config-next": "16.2.6",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-storybook": "10.4.1",
@@ -48,7 +49,6 @@
     "sass-embedded": "1.100.0",
     "storybook": "10.4.1",
     "typescript": "6",
-    "vitest": "4.1.7",
-    "@vitest/browser-playwright": "4.1.7"
+    "vitest": "4.1.7"
   }
 }
